@@ -4,17 +4,17 @@ operator = random.randint(1, 4)
 
 first_number = random.randint(1, 20)
 
-second_number = random.randint(1, 50)
+second_number = random.randint(1, 10)
 
 scores = 0
 
 chance = 5
 
 
-def check_int(val: str) -> int:
+def check_int(val: str) -> float:
     while not val.isnumeric():
         val = "ERREUR: Entrer un nombre: "
-    return int(val)
+    return float(val)
 
 
 def addition(number1: int, number2: int):
@@ -85,7 +85,8 @@ def division(number1: int, number2: int):
 
 def question(number1: int, number2: int, op: int):
 
-    for i in range(chance):
+    i = 0
+    while i < chance:
         if op == 1:
             addition(number1, number2)
         elif op == 2:
@@ -96,9 +97,12 @@ def question(number1: int, number2: int, op: int):
             division(number1, number2)
 
         op = random.randint(1, 4)
+        number1 = random.randint(1, 20)
+        number2 = random.randint(1, 10)
+        i += 1
     
     print("--------------------------------------------------------------------------------")
-    print("Votre Score est de : ")
+    print("Votre Score est de : ", scores)
     print("--------------------------------------------------------------------------------")
 
 

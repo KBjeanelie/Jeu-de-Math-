@@ -1,0 +1,10 @@
+This is a file where I write all the problems and beug present in the program
+
+Current problem:
+   Cannot subtract a number less than that of a number greater, ie when I subtract (2 - 10), the expected answer should be -8
+   so when I enter -8, the program does not continue. Likewise for division, if the answer is a floating point number,
+   the program does not continue it is in pause mode and you can enter numbers and press the enter key, it will just keep entering
+   and impossible to continue the game.
+
+SOLUTION PROBLEM:
+    ...write here the solution of the problem...
