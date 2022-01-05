@@ -45,6 +45,7 @@ def substraction(number1: int, number2: int):
         print("Vous avez gagnez 12 points :)")
         scores += 12
         return
+
     print("Désolé, mauvaise réponse !")
     print("Vous avez perdu 3 points :(")
     scores -= 3
@@ -83,7 +84,30 @@ def division(number1: int, number2: int):
 
 
 def question(number1: int, number2: int, op: int):
-    response = 0
 
+    for i in range(chance):
+        if op == 1:
+            addition(number1, number2)
+        elif op == 2:
+            substraction(number1, number2)
+        elif op == 3:
+            multiplication(number1, number2)
+        else:
+            division(number1, number2)
+
+        op = random.randint(1, 4)
     
+    print("--------------------------------------------------------------------------------")
+    print("Votre Score est de : ")
+    print("--------------------------------------------------------------------------------")
 
+
+def main():
+    question(first_number, second_number, operator)
+
+
+#######################################################################################################
+#                                    STARTING PROGRAMME                                               #
+#######################################################################################################
+
+main()
